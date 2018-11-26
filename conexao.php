@@ -27,9 +27,9 @@ function inserirPessoa() {
     $banco = abrirBanco();
     $sql = "INSERT INTO pessoa (nome,nascimento,endereco,telefone)"
             . "VALUES ('{$_POST["nome"]}',"
-            . "'{$_POST["nascimento"]}'"
-            . ",'{$_POST["endereco"]}'"
-            . ",'{$_POST["telefone"]}')";
+            . "'{$_POST["nascimento"]}',"
+            . "'{$_POST["endereco"]}',"
+            . "'{$_POST["telefone"]}')";
     if ($banco->query($sql) === TRUE) {
         voltarIndex();
     } else {
